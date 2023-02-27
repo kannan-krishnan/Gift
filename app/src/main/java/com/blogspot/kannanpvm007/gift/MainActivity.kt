@@ -16,7 +16,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.blogspot.kannanpvm007.gift.ui.theme.AppTheme
+import com.blogspot.kannanpvm007.themelibrary.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -24,21 +24,26 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AppTheme {
+            AppTheme() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-//                    Greeting("Android")
                     SetUpNavGraph()
                 }
             }
         }
     }
 
+@Composable
+    fun SetUpNavGraph(){
+        navController= rememberNavController()
+    AppnavGraph(comtrller = navController)
+    }
+
     @Composable
-    fun SetUpNavGraph() {
+    fun SetUpNavGraphOld() {
         navController = rememberNavController()
         NavHost(navController = navController, startDestination = "SplashScreen") {
             composable("HomePage") {

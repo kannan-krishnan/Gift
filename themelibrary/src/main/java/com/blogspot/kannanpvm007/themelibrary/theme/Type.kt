@@ -1,4 +1,4 @@
-package com.blogspot.kannanpvm007.gift.ui.theme
+package com.blogspot.kannanpvm007.themelibrary.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

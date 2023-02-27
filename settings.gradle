@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Gift"
 include ':app'
+include ':themelibrary'
+include ':authModle'
+include ':wlcome_model'
+include ':gift_module'
